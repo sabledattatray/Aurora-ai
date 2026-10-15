@@ -163,9 +163,8 @@ Aurora AI is fully optimized for static edge deployment on **Vercel** with zero-
 1. Push this repository to your GitHub account: `https://github.com/sabledattatray/aurora-ai`.
 2. Go to [Vercel Dashboard](https://vercel.com/new).
 3. Import your `aurora-ai` repository.
-4. Vercel automatically reads [`vercel.json`](vercel.json):
-   - **Framework Preset**: `Next.js`
-   - **Output Directory**: `out`
+4. Vercel automatically detects the Next.js workspace:
+   - **Framework Preset**: `Next.js` (Zero configuration required)
 5. Click **Deploy**!
 
 > **Note**: No environment variables are required on Vercel for the web client. The static bundle executes client-side and connects directly to your local Ollama or optional gateway.
