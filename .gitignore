@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Next.js Build Outputs
+.next/
+out/
+web/.next/
+web/out/
+
+# Build and Dist
+dist/
+build/
+.turbo/
+*.tsbuildinfo
+
+# Vercel
+.vercel/
+
+# Environment Files
+.env
+.env*.local
+.env.production
+.env.development
+!.env.example
+
+# Logs and Diagnostics
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System & IDE
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Testing & Coverage
+coverage/
+test-results/
+playwright-report/

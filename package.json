@@ -1,0 +1,23 @@
+{
+  "name": "aurora-ai",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["packages/*", "web", "gateway"],
+  "scripts": {
+    "dev": "npm run dev -w web",
+    "build": "npm run build -w web",
+    "lint": "npm run lint -w web",
+    "typecheck": "npm run typecheck -w @aurora/core && npm run typecheck -w @aurora/gateway && npm run typecheck -w web",
+    "test": "npm run test -w @aurora/core && npm run test -w @aurora/gateway && npm run test -w web",
+    "check": "npm run lint && npm run typecheck && npm run test && npm run build"
+  },
+  "overrides": {
+    "micromark-extension-math": {
+      "katex": "^0.19.0"
+    },
+    "rehype-katex": {
+      "katex": "^0.19.0"
+    },
+    "katex": "^0.19.0"
+  }
+}

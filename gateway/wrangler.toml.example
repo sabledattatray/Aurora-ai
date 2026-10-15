@@ -1,0 +1,19 @@
+# Cloudflare Worker Configuration Example for Aurora Gateway (PRD 10.2, 10.6)
+# Rename to wrangler.toml when deploying to Cloudflare Workers.
+# Never commit actual secret tokens or keys to version control.
+
+name = "aurora-gateway"
+main = "src/index.ts"
+compatibility_date = "2026-10-15"
+
+[vars]
+# [PUBLIC / SAFE CONFIGURATION]
+HOSTED_PROVIDER_MODEL_ALLOWLIST = "@cf/meta/llama-3-8b-instruct,@cf/meta/llama-3.1-8b-instruct,@cf/mistral/mistral-7b-instruct-v0.2"
+HOSTED_PROVIDER_DEFAULT_MODEL = "@cf/meta/llama-3-8b-instruct"
+ALLOWED_ORIGINS = "https://aurora.example.com,http://localhost:3000"
+RATE_LIMIT_MAX_REQUESTS = "20"
+KILL_SWITCH = "false"
+
+# [SERVER-ONLY SECRETS: configure via 'wrangler secret put <NAME>' - NEVER hardcode here]
+# HOSTED_PROVIDER_ACCOUNT_ID: Cloudflare Account ID
+# HOSTED_PROVIDER_API_TOKEN: Cloudflare API token with Workers AI read/run permissions
