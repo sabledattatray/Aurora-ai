@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { APP_NAME } from '@/lib/config';
+import { AuroraLogo } from '@/components/shared/Logo';
 
 const CARDS = [
   { title: 'Explain a topic', prompt: 'Explain how photosynthesis works in simple terms.' },
@@ -11,6 +12,9 @@ const CARDS = [
 export function Welcome({ modelReady, onPick }: { modelReady: boolean; onPick: (prompt: string) => void }) {
   return (
     <section className="mx-auto w-full max-w-3xl px-4 py-8" aria-labelledby="welcome-h">
+      <div className="mb-4">
+        <AuroraLogo size={52} />
+      </div>
       <h1 id="welcome-h" className="text-2xl font-semibold">Welcome to {APP_NAME}</h1>
       <p className="mt-2 text-muted">
         A private assistant that keeps your conversations in this browser. No account needed.

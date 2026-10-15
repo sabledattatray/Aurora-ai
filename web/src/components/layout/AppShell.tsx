@@ -3,6 +3,7 @@ import { Suspense, useEffect, useState, type ReactNode } from 'react';
 import Link from 'next/link';
 import { toUserFacingError } from '@aurora/core';
 import { APP_NAME } from '@/lib/config';
+import { AuroraLogo } from '@/components/shared/Logo';
 import { useApp } from '@/components/AppProvider';
 import { SidebarContent } from './Sidebar';
 
@@ -90,7 +91,10 @@ export function AppShell({ children }: { children: ReactNode }) {
               <line x1="4" y1="18" x2="20" y2="18" />
             </svg>
           </button>
-          <Link href="/" className="font-semibold">{APP_NAME}</Link>
+          <Link href="/" className="flex items-center gap-2 font-semibold transition-opacity hover:opacity-90">
+            <AuroraLogo size={26} />
+            <span>{APP_NAME}</span>
+          </Link>
           <span className="flex-1" />
           <Link href="/settings/" className="pill" aria-label={modelBadge.label}>
             {modelBadge.text}

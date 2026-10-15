@@ -1,6 +1,8 @@
 <div align="center">
 
-# 🌌 Aurora AI
+<img src="docs/assets/aurora-logo.png" alt="Aurora AI Logo" width="120" height="120" style="border-radius: 28px;" />
+
+# Aurora AI
 
 ### Privacy-First • Local-First • Zero-Telemetry Intelligent Assistant
 
